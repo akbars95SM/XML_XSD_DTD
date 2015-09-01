@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+	
+	<databaseName>FOOTBALL_GAME</databaseName>
+	<table tableName="COUNTRY">
+		<field>countryId</field>
+		<field>countryName</field>
+		<field>countryFlag</field>
+		<primaryKey>
+			<primaryKeyName>PK_countryId</primaryKeyName>
+			<fieldName>countryId</fieldName>
+		</primaryKey>
+	</table>
+	
+	<table tableName="CITY">
+		<field>cityId</field>
+		<field>cityName</field>
+		<field>countryId</field>
+		<primaryKey>
+			<primaryKeyName>PK_cityId</primaryKeyName>
+			<fieldName>cityId</fieldName>
+		</primaryKey>
+		<foreignKey relationshipName="FK_CITY_countryId" fieldName="countryId"/>
+	</table>
+</database>
